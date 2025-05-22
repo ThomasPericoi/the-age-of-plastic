@@ -1,0 +1,26 @@
+/* #Heros
+--------------------------------------------------------------- */
+/* Simple */
+.hero-simple {
+    text-align: center;
+}
+
+.hero-simple .breadcrumbs {
+    margin-bottom: 1rem;
+}
+
+/* Thumbnail */
+.hero-thumbnail {
+    margin-top: calc(var(--spacing-section-outer) * -1);
+    padding: var(--spacing-section-inner) 0;
+    color: var(--white);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #00000055;
+    background-blend-mode: darken;
+}
+
+.hero-thumbnail .breadcrumbs * {
+    color: var(--white);
+}

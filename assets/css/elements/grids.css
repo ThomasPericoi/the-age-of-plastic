@@ -1,0 +1,29 @@
+/* #Grids
+--------------------------------------------------------------- */
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: var(--spacing-section-inner);
+}
+
+@media screen and (min-width: 1200px) {
+    .posts-grid {
+        &.grid-2 {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        &.grid-3 {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        &.grid-4 {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .posts-grid .post {
+        flex-direction: column;
+    }
+}

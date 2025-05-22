@@ -1,0 +1,88 @@
+/* #Typography
+--------------------------------------------------------------- */
+body {
+    font-family: var(--body);
+    line-height: 1.65;
+    font-weight: 300;
+    color: var(--content-color);
+}
+
+p,
+.p-size {
+    font-size: clamp(1em, 1.2vw, 1.125em);
+    font-weight: 300;
+    color: var(--content-color);
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+em,
+i {
+    font-style: italic;
+}
+
+sup {
+    vertical-align: super;
+    font-size: 0.7em;
+}
+
+a {
+    color: var(--secondary);
+}
+
+h1,
+.h1-size,
+h2,
+.h2-size,
+h3,
+.h3-size,
+h4,
+.h4-size,
+h5,
+.h5-size,
+h6,
+.h6-size {
+    font-style: normal;
+    font-family: var(--bold);
+    font-weight: 700;
+    line-height: 1.15;
+    -webkit-font-smoothing: antialiased;
+}
+
+h5,
+h6 {
+    line-height: 1.4;
+}
+
+h1,
+.h1-size {
+    font-size: clamp(1.75em, 4vw, 4em);
+}
+
+h2,
+.h2-size {
+    font-size: clamp(1.5em, 3vw, 3em);
+}
+
+h3,
+.h3-size {
+    font-size: clamp(1.375em, 2.5vw, 2.125em);
+}
+
+h4,
+.h4-size {
+    font-size: clamp(1.25em, 2vw, 1.5em);
+}
+
+h5,
+.h5-size {
+    font-size: clamp(1.125em, 1.5vw, 1.25em);
+}
+
+h6,
+.h6-size {
+    font-size: clamp(1em, 1.2vw, 1.125em);
+}

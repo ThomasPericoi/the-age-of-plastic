@@ -1,0 +1,136 @@
+/* #Content
+--------------------------------------------------------------- */
+.formatted {
+    display: flex;
+    flex-direction: column;
+    gap: var(--content-spacing);
+}
+
+/* List */
+.formatted p {
+    color: var(--content-color);
+}
+
+.formatted ul,
+.formatted ol {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75em;
+}
+
+.formatted ul>li,
+.formatted ol>li {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: var(--content-spacing);
+    text-indent: 0;
+    color: var(--content-color);
+
+    &:before {
+        margin-top: 0.6em;
+        margin-left: 0.6em;
+    }
+
+    ul,
+    ol {
+        margin-top: 0.6em;
+    }
+}
+
+.formatted ul>li:before {
+    content: "";
+    border: 3px solid var(--primary);
+    border-radius: 50%;
+}
+
+.formatted ol>li {
+    counter-increment: item;
+
+    &:before {
+        content: counter(item);
+        color: var(--accent-content-color);
+        font-weight: 700;
+        transform: translateY(-70%);
+    }
+}
+
+/* Image */
+.formatted figure img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: var(--border-radius) 5px;
+}
+
+.formatted figure img + figcaption,
+.wp-block-image .wp-element-caption {
+    margin-top: 0.5em;
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+/* Quote */
+.wp-block-quote {
+    position: relative;
+    padding: 1em 1em 1em 2em;
+    border-left: 5px solid var(--accent-content-color);
+
+    &:before {
+        content: "\201C";
+        min-height: 40px;
+        display: block;
+        font-size: 4em;
+        font-family: var(--bold);
+        color: var(--accent-content-color);
+        line-height: 1em;
+    }
+
+    &>*:not(:nth-last-child(1)) {
+        margin-top: 0;
+        margin-bottom: 1em;
+    }
+
+    cite {
+        display: block;
+        text-align: right;
+        font-family: var(--bold);
+        font-weight: 700;
+    }
+}
+
+/* Tables */
+.wp-block-table {
+    overflow-x: auto;
+
+    &.is-style-stripes {
+        border-spacing: 0;
+        border-collapse: inherit;
+        background-color: transparent;
+
+        tbody tr:nth-child(odd) {
+            background-color: #f0f0f0;
+        }
+    }
+
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td,
+    th {
+        border: 1px solid #dcdcdc;
+        padding: 1em;
+        vertical-align: middle;
+    }
+
+    th {
+        background-color: var(--accent-content-color);
+        font-weight: bold;
+    }
+}
+
+.has-text-align-center {
+    text-align: center;
+}

@@ -1,0 +1,77 @@
+{
+    "key": "group_682da1fcae1b1",
+    "title": "Composant - Slider de comparaison d'images",
+    "fields": [
+        {
+            "key": "field_682da244f6919",
+            "label": "Image (Gauche)",
+            "name": "image_left",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "L'image doit avoir le même format que l'image suivante.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        },
+        {
+            "key": "field_682da22ef6918",
+            "label": "Image (Droite)",
+            "name": "image_right",
+            "aria-label": "",
+            "type": "image",
+            "instructions": "L'image doit avoir le même format que l'image précédente.",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "return_format": "array",
+            "library": "all",
+            "min_width": "",
+            "min_height": "",
+            "min_size": "",
+            "max_width": "",
+            "max_height": "",
+            "max_size": "",
+            "mime_types": "",
+            "allow_in_bindings": 0,
+            "preview_size": "medium"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1747821202
+}

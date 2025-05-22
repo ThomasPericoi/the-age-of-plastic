@@ -1,0 +1,82 @@
+/* #Slider Comparison
+--------------------------------------------------------------- */
+.comparison-slider {
+  --mask-width: 50%;
+  --handle-size: 32px;
+
+  width: 100%;
+  position: relative;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.comparison-slider .image-right {
+  width: 100%;
+  display: block;
+}
+
+.comparison-slider .mask {
+  width: var(--mask-width);
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background: var(--white);
+  overflow: hidden;
+}
+
+.comparison-slider .image-left {
+  width: auto;
+  height: 100%;
+}
+
+.comparison-slider input[type="range"] {
+  width: calc(100% + var(--handle-size));
+  height: 100%;
+  appearance: none;
+  position: absolute;
+  top: 0;
+  left: calc(var(--handle-size) / -2);
+  z-index: 2;
+  opacity: 0;
+  background-color: transparent;
+  cursor: col-resize;
+}
+
+.comparison-slider .separator {
+  width: 2px;
+  height: 100%;
+  margin-left: -1px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  left: var(--mask-width);
+  background: var(--white);
+  pointer-events: none;
+}
+
+.comparison-slider svg {
+  width: var(--handle-size);
+  height: var(--handle-size);
+  padding: 0.5rem;
+  position: absolute;
+  top: 50%;
+  left: var(--mask-width);
+  z-index: 2;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  background: var(--tertiary);
+  transform: translate(-50%, -50%);
+}
+
+.comparison-slider svg path {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1px;
+}
+
+.comparison-slider input[type="range"]:focus+.separator svg {
+  outline: dashed 1px var(--white);
+  outline-offset: 6px;
+}

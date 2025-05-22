@@ -1,0 +1,169 @@
+/* #Front page
+--------------------------------------------------------------- */
+/* Hero */
+.home-hero {
+    min-height: 75vh;
+    padding: var(--spacing-section-outer) 0;
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #00000055;
+    background-blend-mode: darken;
+}
+
+.home-hero .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-section-inner);
+}
+
+.home-hero .hero-title {
+    color: var(--white);
+}
+
+.home-hero .hero-subtitle {
+    order: -1;
+    font-family: var(--bold);
+    text-transform: uppercase;
+    color: var(--white);
+}
+
+/* Home Surgeons */
+.home-surgeons {
+    padding: var(--spacing-section-outer) 0;
+}
+
+.home-surgeons .col:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 1200px) {
+    .home-surgeons .col:nth-child(2) {
+        flex-direction: row;
+        align-items: stretch;
+    }
+}
+
+.home-surgeons .portrait {
+    width: 100%;
+    min-height: 450px;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+@media screen and (min-width: 1200px) {
+    .home-surgeons .portrait {
+        min-height: 550px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .home-surgeons .portrait:nth-child(2) {
+        border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    }
+}
+
+/* Home Domains */
+.home-domains .domains-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+}
+
+@media screen and (min-width: 1200px) {
+    .home-domains .domains-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.home-domains .domains-grid .element {
+    width: 100%;
+    min-height: 300px;
+    padding: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: filter 250ms ease;
+}
+
+@media screen and (min-width: 1200px) {
+    .home-domains .domains-grid .element {
+        min-height: 550px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+
+    .home-domains .domains-grid .element:nth-child(6n + 1),
+    .home-domains .domains-grid .element:nth-child(6n + 6) {
+        grid-column: span 2;
+    }
+}
+
+.home-domains .domains-grid .element .btn {
+    font-size: 0.875em;
+}
+
+/* Home Before / After */
+.home-before-after {
+    padding: var(--spacing-section-outer) 0;
+}
+
+/* Home RDV */
+.home-rdv {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+    color: var(--white);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #00000055;
+    background-blend-mode: darken;
+}
+
+.home-rdv .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-section-inner);
+}
+
+/* Home PR */
+.home-pr {
+    padding: var(--spacing-section-outer) 0;
+    position: relative;
+}
+
+.home-pr h2 {
+    margin-bottom: var(--spacing-section-inner);
+    text-align: center;
+}
+
+.home-pr .swiper .swiper-wrapper {
+    align-items: center;
+}
+
+.home-pr .element img {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    max-height: 100px;
+    display: block;
+}

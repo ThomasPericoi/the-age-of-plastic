@@ -1,0 +1,136 @@
+/* #Forms
+--------------------------------------------------------------- */
+.wpcf7-form label {
+    width: 100%;
+    display: block;
+    font-family: var(--bold);
+}
+
+@media screen and (min-width: 992px) {
+
+    .wpcf7-form label.label-sm {
+        width: calc(50% - 12px);
+    }
+}
+
+.wpcf7-form label input,
+.wpcf7-form label textarea,
+.wpcf7-form label select {
+    margin-top: 0.5em;
+}
+
+.wpcf7-form input[type="text"],
+.wpcf7-form input[type="email"],
+.wpcf7-form input[type="tel"],
+.wpcf7-form input[type="number"],
+.wpcf7-form input[type="file"],
+.wpcf7-form textarea,
+.wpcf7-form select {
+    width: 100%;
+    padding: 1rem;
+    color: var(--content-color);
+    font-family: var(--body);
+    background-color: var(--secondary-light);
+    border: 0;
+    border-radius: var(--border-radius) 0;
+    outline-color: var(--primary);
+    box-sizing: border-box;
+}
+
+.wpcf7-form select {
+    cursor: pointer;
+}
+
+.wpcf7-form select option {
+    padding: 1rem;
+}
+
+.wpcf7-form label sup {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.wpcf7-not-valid-tip {
+    margin-top: 0.5em;
+    font-family: var(--bold);
+}
+
+/* Checkboxes & Radios */
+.wpcf7-form [type="checkbox"]:checked,
+.wpcf7-form [type="radio"]:checked,
+.wpcf7-form [type="checkbox"]:not(:checked),
+.wpcf7-form [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+
+.wpcf7-form [type="checkbox"]:checked+span,
+.wpcf7-form [type="radio"]:checked+span,
+.wpcf7-form [type="checkbox"]:not(:checked)+span,
+.wpcf7-form [type="radio"]:not(:checked)+span {
+    padding-left: 35px;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.wpcf7-form [type="checkbox"]:checked+span:before,
+.wpcf7-form [type="radio"]:checked+span:before,
+.wpcf7-form [type="checkbox"]:not(:checked)+span:before,
+.wpcf7-form [type="radio"]:not(:checked)+span:before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    background-color: var(--secondary-light);
+    border-radius: 6px;
+}
+
+.wpcf7-form [type="checkbox"]:focus+span:before {
+    outline: 2px solid var(--primary);
+}
+
+.wpcf7-form [type="checkbox"]:checked+span:after,
+.wpcf7-form [type="radio"]:checked+span:after,
+.wpcf7-form [type="checkbox"]:not(:checked)+span:after,
+.wpcf7-form [type="radio"]:not(:checked)+span:after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 4px;
+    left: 2px;
+    background: var(--secondary);
+    border-radius: 3px;
+    transition: all 250ms ease;
+}
+
+.wpcf7-form [type="checkbox"]:not(:checked)+span:after,
+.wpcf7-form [type="radio"]:not(:checked)+span:after {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.wpcf7-form [type="checkbox"]:checked+span:after,
+.wpcf7-form [type="radio"]:checked+span:after {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.wpcf7-form [type="radio"]:checked+span,
+.wpcf7-form [type="radio"]:not(:checked)+span {
+    margin-bottom: 10px;
+}
+
+.wpcf7-form [type="radio"]:checked+span:before,
+.wpcf7-form [type="radio"]:not(:checked)+span:before,
+.wpcf7-form [type="radio"]:checked+span:after,
+.wpcf7-form [type="radio"]:not(:checked)+span:after {
+    border-radius: 100%;
+}
+
+.wpcf7-list-item {
+    margin: 0;
+}

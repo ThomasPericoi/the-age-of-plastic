@@ -1,0 +1,21 @@
+/* #Base
+--------------------------------------------------------------- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--white);
+}
+
+main {
+    margin-top: var(--header-height);
+    animation: fadeIn ease 750ms;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+::selection {
+    color: var(--white);
+    background: var(--secondary);
+}
